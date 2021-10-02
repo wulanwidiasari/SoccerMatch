@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/mainTitleCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp">
+
+        <TextView
+            android:id="@+id/mainTitleTxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="APLAS SOCCER BOARD"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="7px"
+            android:textColor="#fdf08f"
+            android:background="#e23f0d"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/homeTeamCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#a3aeff">
+
+        <TextView
+            android:id="@+id/homeLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Home Team"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="5px"
+            android:textColor="#faee8f"
+            android:background="#001d7e"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp">
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/homeTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="7pt"
+                    android:hint="Enter home team name"
+                    android:textAlignment="center"/>
+
+                <ImageButton
+                    android:id="@+id/homeImage"
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:src="@drawable/teamlogo"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#a3aeff"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:layout_marginBottom="5dp">
+
+                    <TextView
+                        android:id="@+id/homePlayerNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 player(s)"
+                        android:textColor="#70121b"
+                        android:textStyle="bold"
+                        android:textSize="8pt"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"/>
+
+                    <ImageButton
+                        android:id="@+id/addHomePlayer"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_add_button"
+                        android:scaleType="fitEnd"
+                        android:layout_marginLeft="72dp"
+                        android:background="#a3aeff"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/homePlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dp"
+                android:background="#dee1ff"
+                android:layout_gravity="end"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/awayTeamCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="7dp"
+        app:cardElevation="6dp"
+        app:cardBackgroundColor="#a2e0b6">
+
+        <TextView
+            android:id="@+id/awayLabel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Away Team"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:padding="5px"
+            android:textColor="#fcef8f"
+            android:background="#02443e"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="28dp">
+
+            <LinearLayout
+                android:layout_width="220dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/awayTeam"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="7pt"
+                    android:hint="Enter away team name"
+                    android:textAlignment="center"/>
+
+                <ImageButton
+                    android:id="@+id/awayImage"
+                    android:layout_width="112dp"
+                    android:layout_height="112dp"
+                    android:src="@drawable/teamlogo"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"
+                    android:background="#a2e0b6"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="5dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/awayPlayerNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0 player(s)"
+                        android:textColor="#70121b"
+                        android:textStyle="bold"
+                        android:textSize="8pt"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="8dp"/>
+
+                    <ImageButton
+                        android:id="@+id/addAwayPlayer"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/icon_add_button"
+                        android:scaleType="fitCenter"
+                        android:layout_gravity="end"
+                        android:layout_marginLeft="72dp"
+                        android:background="#a2e0b6"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/awayPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:dividerHeight="1dp"
+                android:background="#edfff6"
+                android:layout_gravity="end"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="5dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/startBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="6dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:backgroundTint="@null"
+        android:background="@drawable/round_btn"
+        android:text="Next"
+        android:textSize="7pt"
+        android:textAllCaps="false"
+        android:drawableLeft="@drawable/next_button_icon"
+        android:gravity="center_vertical"
+        android:layout_gravity="right"/>
+
+</LinearLayout>

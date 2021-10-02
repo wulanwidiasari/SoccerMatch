@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/logLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LogActivity">
+
+    <TextView
+        android:id="@+id/matchResultTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="Home Team: 3"
+        android:textSize="12pt"/>
+
+    <TextView
+        android:id="@+id/matchScoreTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold|italic"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:text="Away Team: 1"
+        android:textSize="12pt"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/logRcView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        style="@style/CardView.Light"
+        android:layout_marginTop="8dp"/>
+
+    <Button
+        android:id="@+id/restartBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Match"
+        android:textAllCaps="false"
+        android:background="@drawable/round_btn"
+        android:drawableLeft="@drawable/reload_button_icon"
+        android:gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
